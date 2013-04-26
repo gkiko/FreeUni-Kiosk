@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	-font: 71%/1.5 BPG Rioni, Verdana, Sans-Serif;
+	background: #eee;
+	background-image: url('bg.jpg');
+	width: 1280px;
+}
+
+[type~=submit] {
+	/*position: absolute;*/
+	/*left: 600px;*/
+	/*top: 140px;*/
+	width: 300px;
+	height: 100px;
+	background-color: #33FF33
+}
+
+Input {
+	width: 500px;
+	position: relative;
+	border: 2px solid #227022;
+	margin: 10px;
+	padding: 4px;
+	-webkit-border-radius: 10px;
+	font: 2em/2 BPG Rioni, Verdana, Sans-Serif;
+	font-weight: bold;
+	-webkit-box-shadow: 5px 5px 3px #888;
+}
+
+div {
+	width: 300px;
+    height: 360px;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
