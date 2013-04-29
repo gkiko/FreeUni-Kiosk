@@ -1,6 +1,6 @@
 <?php
 	
-	require_once($_SERVER['DOCUMENT_ROOT'].'/FreeUni/class.phpmailer.php');
+	require_once('/class.phpmailer.php');
 	
 	$output;
 	
@@ -11,20 +11,20 @@
 	$mail->SMTPAuth   = true;                  // enable SMTP authentication
 	$mail->SMTPSecure = "ssl";                 // sets the prefix to the server
 	$mail->Host       = "smtp.gmail.com:465";      // sets GMAIL as the SMTP server    // set the SMTP port for the GMAIL server
-	$mail->Username   = "gkiko10@freeuni.edu.ge";  // GMAIL username
-	$mail->Password   = "callofdutyq";            // GMAIL password
+	$mail->Username   = "competition@agruni.edu.ge";  // GMAIL username
+	$mail->Password   = "<P4q>5Eq";            // GMAIL password
 	//End Gmail
 	
-	$mail->From       = "gkiko10@freeuni.edu.ge";
-	$mail->FromName   = "Giorgi Kikolashvili";
-	$mail->AddAttachment($_SERVER['DOCUMENT_ROOT'].'/FreeUni/individualuri.txt');
-	$mail->AddAttachment($_SERVER['DOCUMENT_ROOT'].'/FreeUni/lavuaziis.txt');
-	$mail->AddAttachment($_SERVER['DOCUMENT_ROOT'].'/FreeUni/edisonis.txt');
-	$mail->Subject    = "Registered Students";
+	$mail->From       = "competition@agruni.edu.ge";
+	$mail->FromName   = "Agruni Competitions";
+	$mail->AddAttachment($_SERVER['DOCUMENT_ROOT'].'/Kiosk2/individualuri.txt');
+	$mail->AddAttachment($_SERVER['DOCUMENT_ROOT'].'/Kiosk2/lavuaziis.txt');
+	$mail->AddAttachment($_SERVER['DOCUMENT_ROOT'].'/Kiosk2/edisonis.txt');
+	$mail->Subject    = "Registered Students Files";
 	$mail->MsgHTML("დარეგისტრირებული მოსწავლეები");
 	
-	$mail->AddReplyTo("gkiko10@freeuni.edu.ge","Free University of Tbilisi");//they answer here, optional
-	$mail->AddAddress("gvakh10@freeuni.edu.ge","Free University of Tbilisi");
+	$mail->AddReplyTo("competitions@agruni.edu.ge","Agruni Competition");//they answer here, optional
+	$mail->AddAddress("a.kvanchilasvili@agruni.edu.ge","Free University of Tbilisi");
 	$mail->IsHTML(true); // send as HTML
 	
 	if(!$mail->Send()) {//to see if we return a message or a value bolean

@@ -56,7 +56,7 @@
 	fclose($fh);
 	
 	// -------------------
-	require_once($_SERVER['DOCUMENT_ROOT'].'class.phpmailer.php');	
+	require_once('class.phpmailer.php');	
 	$output;
 	$mail  = new PHPMailer();   
 	$mail->IsSMTP();
@@ -64,17 +64,17 @@
 	$mail->SMTPAuth   = true;                  // enable SMTP authentication
 	$mail->SMTPSecure = "ssl";                 // sets the prefix to the server
 	$mail->Host       = "smtp.gmail.com:465";      // sets GMAIL as the SMTP server    // set the SMTP port for the GMAIL server
-	$mail->Username   = "XXX@gmail.com";  // GMAIL username
-	$mail->Password   = "XXX";            // GMAIL password
+	$mail->Username   = "competition@agruni.edu.ge";  // GMAIL username
+	$mail->Password   = "<P4q>5Eq";            // GMAIL password
 	//End Gmail
 	
 	$mail->ContentType = 'text/html';
 	$mail->CharSet = 'UTF-8';
-	$mail->From       = "XXX@gmail.com";
-	$mail->FromName   = "Free University";
+	$mail->From       = "competition@agruni.edu.ge";
+	$mail->FromName   = "Agruni Competitions";
 	$mail->Subject    = "Registration Confirmed !";
 	$mail->MsgHTML($mailText);	
-	$mail->AddReplyTo("XXX@gmail.com","Free University");//they answer here, optional
+	$mail->AddReplyTo("a.kvanchilasvili@agruni.edu.ge","Agruni Competitions");//they answer here, optional
 	$mail->AddAddress($_POST['email'],"name to");
 	$mail->IsHTML(true); // send as HTML
 	
